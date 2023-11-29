@@ -1,17 +1,17 @@
 import "./User.component.css";
 import { Button } from "../Button.component/Button.component";
 
-export function User({ urlProfilePhoto, name }) {
+export function User({ userInfo }) {
   const user = {
-    name: name,
-    email: "user@gmail.com",
-    password: "Contraseña",
-    urlProfilePhoto: urlProfilePhoto,
+    name: userInfo.name,
+    email: userInfo.email,
+    urlProfilePhoto: userInfo.urlProfilePhoto,
   };
 
   return (
     <div className="card">
-      <img className="profilePhoto"
+      <img
+        className="profilePhoto"
         src={
           user.urlProfilePhoto
             ? user.urlProfilePhoto
@@ -23,7 +23,12 @@ export function User({ urlProfilePhoto, name }) {
         <li>{user.password} </li>
       </ul>
       <p>{JSON.stringify(user)}</p>
-      <Button action={()=>{alert(`Hola soy ${user.name}`)}} label='Saludar'/>
+      <Button
+        action={() => {
+          alert(`Hola soy ${user.name}`);
+        }}
+        label="Saludar"
+      />
     </div>
   );
 }

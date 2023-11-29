@@ -1,8 +1,11 @@
 button{
     background-color: aliceblue;
-    color: #212121;
+    color: orangered;
+    font-weight: 500;
     font-size: 15px;
     padding: 10px;
     border:none;
     border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid orangered;
 }

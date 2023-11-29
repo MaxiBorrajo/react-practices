@@ -11,3 +11,11 @@
 - los props se pasan por parametro, que son la comunicacion de padre a hijo
 
 - npm i prop-types para poner tipos a los props
+
+<code>
+return userList.map((user, index) => {
+    return <User userInfo={user} key={index} />;
+})
+ </code>
+
+- useState es como el ref de vue y el useEffect es onUpdated de vue o algo asi
