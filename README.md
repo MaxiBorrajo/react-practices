@@ -12,10 +12,8 @@
 
 - npm i prop-types para poner tipos a los props
 
-<code>
-return userList.map((user, index) => {
+<code>return userList.map((user, index) => {
     return <User userInfo={user} key={index} />;
-})
- </code>
+})</code>
 
 - useState es como el ref de vue y el useEffect es onUpdated de vue o algo asi
