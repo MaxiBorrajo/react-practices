@@ -1,4 +1,4 @@
-##apuntes
+#apuntes#
 
 - Para iniciar proyecto: create react app <Nombre proyecto>
 
