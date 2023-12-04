@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { TaskContext } from "../../context/Task.context";
 
-function TaskForm({ createTask }) {
+function TaskForm() {
+  const { createTask } = useContext(TaskContext);
+
   const [task, setTask] = useState({
     id: 0,
     task: "",
@@ -24,8 +27,11 @@ function TaskForm({ createTask }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className=" bg-slate-700 px-6 py-5 rounded-md flex flex-col gap-3 self-center">
+      <h1 className="text-white text-2xl font-bold">Create new task</h1>
+      <div className="flex  gap-3">
       <input
+      className="rounded-md px-3 py-1"
         type="text"
         placeholder="Escribe tu tarea"
         value={task.task}
@@ -37,6 +43,7 @@ function TaskForm({ createTask }) {
         }}
       />
       <select
+      className="rounded-md px-1"
         name="priority"
         id="priority"
         value={task.priority}
@@ -51,7 +58,8 @@ function TaskForm({ createTask }) {
         <option value="Media">Media</option>
         <option value="Alta">Alta</option>
       </select>
-      <button type="submit">Guardar</button>
+      <button type="submit" className="bg-sky-500 px-2 rounded-md text-sm text-white">Guardar</button>
+      </div>
     </form>
   );
 }

@@ -1,17 +1,20 @@
-import "./TaskList.css";
 import Task from "../../components/Task/TaskComponent";
+import { useContext } from "react";
+import { TaskContext } from "../../context/Task.context";
 
-function TaskList({ tasks, updateTask, deleteTask }) {
+function TaskList() {
+  const { tasks } = useContext(TaskContext);
+
   if (tasks.length === 0) {
-    return <h1>No hay tareas disponibles</h1>;
+    return <h1 className="text-center text-3xl text-white text-bold">No hay tareas disponibles</h1>;
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-3 gap-5">
       {tasks.map((task, index) => {
         return (
           <div key={index}>
-            <Task task={task} updateTask={updateTask} deleteTask={deleteTask}/>
+            <Task task={task} />
           </div>
         );
       })}
