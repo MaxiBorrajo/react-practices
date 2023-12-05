@@ -1,6 +1,6 @@
 <h1>Apuntes</h1>
 
-- Para iniciar proyecto: create react app <Nombre proyecto>
+- Para iniciar proyecto: create react app <Nombre proyecto> o npm create vite@latest <nombre-de-mi-proyecto>
 
 - En react las funciones pueden retornar html, estos serian los componentes y tienen que estar en mayusculas
 
